@@ -1,4 +1,5 @@
 #set page(paper: "a4", margin: (top: .5cm, left: 1cm, right: 0cm, bottom: 0cm))
+#set text(font: "Arial")
 
 #grid(
   columns: (auto, auto),
@@ -34,7 +35,8 @@
   inset: (left: 0.8cm)
 )[
   #align(horizon)[
-    #text(white, size: 12pt)[*UNIVERISTÉ DE TECHNOLOGIE* DE BELFORT-MONTBÉLIARD]
+    #text(white, size: 14pt, weight: 900)[UNIVERISTÉ DE TECHNOLOGIE]
+    #text(white, size: 14pt, weight: 400)[ DE BELFORT-MONTBÉLIARD]
   ]
 ]
 
@@ -45,7 +47,11 @@
   inset: (left: 0.8cm)
 )[
   #align(horizon + left)[
-    #text(rgb(38,38,38), size: 24pt)[Analyse de durabilité des systèmes de propulsion par microcontrôleurs externe]
+    #text(
+      rgb(38,38,38),
+      size: 24pt,
+      weight: "bold"
+    )[Analyse de durabilité des systèmes de propulsion par microcontrôleurs externe]
   ]
 ]
 
@@ -56,7 +62,7 @@
   inset: (left: 0.8cm)
 )[
   #align(horizon)[
-    #text(white, size: 12pt)[Rapport de stage STXX - P20XX]
+    #text(rgb(38,38,38), size: 12pt, weight: "bold")[Rapport de stage STXX - P20XX]
   ]
 ]
 
@@ -72,41 +78,39 @@
     columns: (auto, auto),
     rows: (auto, auto, auto),
     gutter: 1fr,
-    row-gutter: (1fr, 4fr),
+    row-gutter: 1fr,
     inset: (
-      left: 0.8cm,
       top: 0.8cm,
       bottom: 2cm,
       right: 1.2cm
     ),
     align: horizon,
     grid.cell(x:0, y:0)[
-      #text(size: 18pt)[*NOM Prénom*]
+      #text(size: 18pt, weight: "bold")[NOM Prénom]
 
-      #text(size: 10pt)[*Nom de la spécialité 
-      d'ingénieur*]
+      #text(size: 10pt, weight: "bold")[Nom de la spécialité d'ingénieur]
 
-      #text(size: 10pt)[*Nom de la filière*]
+      #text(size: 10pt, weight: "bold")[Nom de la filière]
     ],
     grid.cell(x:0, y:1)[
-      #text(size: 18pt)[*Entreprise DEMO-Contrôleurs*]
+      #text(size: 18pt, weight: "bold")[Entreprise DEMO-Contrôleurs]
 
-      #text(size: 12pt)[*8 rue de la Fierté*]
+      #text(size: 12pt, weight: "bold")[8 rue de la Fierté]
 
-      #text(size: 12pt)[*75013 Paris*]
+      #text(size: 12pt, weight: "bold")[75013 Paris]
 
-      #text(size: 12pt)[*www.democontroleurs.com*]
+      #text(size: 12pt, weight: "bold")[www.democontroleurs.com]
     ],
     grid.cell(x:0, y:2)[
       #text(size: 12pt)[Tuteur en entreprise]
 
-      #text(size: 14pt)[*NOM Prénom*]
+      #text(size: 14pt, weight: "bold")[NOM Prénom]
 
     ],
     grid.cell(x:1, y:2, align: end)[
       #text(size: 12pt)[Suiveur UTBM]
 
-      #text(size: 14pt)[*NOM Prénom*]
+      #text(size: 14pt, weight: "bold")[NOM Prénom]
     ],
   )
 ]
