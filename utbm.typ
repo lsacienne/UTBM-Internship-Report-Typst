@@ -2,6 +2,7 @@
   title: "Analyse de durabilité des systèmes de propulsion par microcontrôleurs externe",
   report-type: "STXX",
   report-year: "P20XX",
+  picture: "assets/images/background.jpg",
   student: (
     first-name: "Prénom",
     last-name: "NOM",
@@ -47,7 +48,7 @@
   show image: set block(above: 6pt)
 
   image(
-    "assets/images/background.jpg",
+    picture,
     width: 20.04cm,
     height: 11.14cm,
     fit: "cover"
@@ -127,7 +128,7 @@
         #text(size: 12pt, weight: "bold")[#company.postal-code #company.city]
 
         #text(size: 12pt, weight: "bold")[
-          #link("http://" + company.website)
+          #link(company.website)
         ]
       ],
       grid.cell(x:0, y:2)[
