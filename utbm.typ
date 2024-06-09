@@ -146,3 +146,108 @@
   ]
 }
 
+#let fourth-cover(
+  abstract,
+  subject: "Sujet de stage et description du travail réalisé",
+  report-type: "STXX",
+  report-year: "P20XX",
+  student: (
+    first-name: "Prénom",
+    last-name: "NOM"
+  ),
+  company: (
+    name: "Entreprise DEMO-Contrôleurs",
+    address: "8 rue de la Fierté",
+    postal-code: "75013",
+    city: "Paris",
+    website: "www.democontroleurs.com",
+  ),
+) = {
+
+  set text(font: "Arial")
+  set page(
+    paper: "a4",
+    margin: (top: 0cm, left: 1cm, right: 0cm, bottom: 3cm),
+    footer: [
+      #grid(
+        columns: 2,
+        column-gutter: 1fr,
+        align: top,
+        inset: (right:1.5cm),
+        image(
+          "assets/images/utbm_logo.png",
+          width: 2.95cm
+        ),
+        grid.cell()[
+          #grid(
+            columns: 2,
+            gutter: 1mm,
+            image(
+              "assets/images/ut_group.png",
+              width: 1.87cm
+            ),
+            image(
+              "assets/images/ubfc.png",
+              width: 1.81cm
+            )
+          )
+        ]
+      )
+    ]
+  )
+
+  rect(
+    fill: rgb(98,184,143),
+    width: 100%,
+    height: 4.43cm,
+    inset: (left: 0.8cm, bottom: 1.2cm)
+  )[
+    #align(bottom + left)[
+      #show par: set block(spacing: 10pt)
+
+      #text(black, size: 18pt, weight: "bold")[#student.last-name #student.first-name]
+
+      #text(black, size: 14pt, weight: "bold")[Rapport de Stage #report-type - #report-year]
+    ]
+  ]
+
+  block(
+    inset: (left: 0.8cm, right: 2.4cm, top: 0.5cm)
+  )[
+    #show par: set block(spacing: 20pt)
+    #align(left)[
+      #text(size: 12pt, weight: "bold")[
+        #subject
+      ]
+    ]
+    #par(justify: true)[
+      #show par: set block(spacing: 0.65em)
+      
+      #abstract
+
+    ]
+  ]
+  block(
+    height: auto,
+    spacing: 1fr,
+    inset: (left: 0.8cm),
+    par[
+      #show text: set block(spacing: 4pt)
+      #show par: set block(spacing: 4pt)
+      #text(
+        size: 18pt,
+        weight: "bold"
+      )[#company.name]
+      
+      #text(rgb(128,128,128), size: 12pt, weight: "bold")[#company.address]
+
+      #text(rgb(128,128,128), size: 12pt, weight: "bold")[#company.postal-code #company.city]
+
+      #text(rgb(128,128,128), size: 12pt, weight: "bold")[
+        #link(company.website)
+      ]
+    ]
+  )
+}
+
+
