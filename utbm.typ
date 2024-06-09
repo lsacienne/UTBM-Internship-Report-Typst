@@ -76,7 +76,7 @@
   )[
     #align(horizon + left)[
       #text(
-        rgb(38,38,38),
+        white,
         size: 24pt,
         weight: "bold"
       )[#title]
@@ -90,12 +90,13 @@
     inset: (left: 0.8cm)
   )[
     #align(horizon)[
-      #text(rgb(38,38,38), size: 12pt, weight: "bold")[Rapport de stage #report-type - #report-year]
+      #text(white, size: 12pt, weight: "bold")[Rapport de stage #report-type - #report-year]
     ]
   ]
 
   show par: set block(above: 6pt)
 
+  set text(white)
   rect(
     width: 100%,
     height: 10.945cm,
@@ -204,10 +205,11 @@
   )[
     #align(bottom + left)[
       #show par: set block(spacing: 10pt)
+      #set text(white)
 
-      #text(black, size: 18pt, weight: "bold")[#student.last-name #student.first-name]
+      #text(size: 18pt, weight: "bold")[#student.last-name #student.first-name]
 
-      #text(black, size: 14pt, weight: "bold")[Rapport de Stage #report-type - #report-year]
+      #text(size: 14pt, weight: "bold")[Rapport de Stage #report-type - #report-year]
     ]
   ]
 
