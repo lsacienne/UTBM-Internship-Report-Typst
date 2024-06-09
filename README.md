@@ -64,8 +64,9 @@ Few steps are required :
   )
 )
 ```
-
-![Cover example](readme/example_cover.png)
+<div align=center>
+    <img src="https://github.com/lsacienne/UTBM-Internship-Report-Typst/blob/dev/readme/example_cover.png" width=50% center>
+</div>
 
 ### `fourth-cover` function
 
@@ -102,7 +103,13 @@ Few steps are required :
 )[#lorem(248)]
 ```
 
-![Example fourt cover](readme/example_fourth-cover.png)
+<div align=center>
+    <img src="https://github.com/lsacienne/UTBM-Internship-Report-Typst/blob/dev/readme/example_fourth-cover.png" width=50% center>
+</div>
+
+## Modifications
+
+Feel free to modify the template as you wish. Typst is easy to learn if you already have some LaTeX and Markdown notions.
 
 
 
